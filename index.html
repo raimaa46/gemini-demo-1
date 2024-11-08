@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini</title>
+    <link rel="stylesheet" href="./style.css"/>
+    
+</head>
+<body>
+    <div class="container content">
+        <h1 class="big-title" id="title">Ask me anything!</h1>
+        <section id="chat-section">
+          <!-- <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div>
+              <div class="chat-bubble"></div> -->
+        </section>
+        <footer class="input-footer fixed">
+          <input autofocus type="text" class="input-footer__input" id="prompt" />
+          <button type="submit" class="input-footer__submit" id="submit-button">
+            Submit
+          </button>
+        </footer>
+      </div>
+      <script>
+        const input=document.getElementById("prompt");
+        const  chatsection=document.getElementById("chat-section");
+        const submit=document.getElementById("submit-button");
+        function click(){
+          const value=input.value;
+          const div=document.createElement("div");
+          div.textContent=value;
+          div.className='user-message';
+          charsection.appenChild(div);
+          input.value="";
+        }
+        submit.onclick=click;
+        function keypress(e){
+          console.log(e.key);
+          if(e.key=='Enter'){
+          submit.click();
+        }
+        // input.onkeypress=keypress;
+        input.addEventListener('keypress',keypress);
+      </script>
+</body>
+</html>

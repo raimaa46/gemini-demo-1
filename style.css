@@ -1,0 +1,186 @@
+
+        /* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+ 
+body {
+  background-color: #131313;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+ 
+.container {
+  max-width: 996px;
+  margin: 0 auto;
+}
+ 
+/* Big Title Styling */
+.big-title {
+  font-size: 4rem; /* Large font size for the title */
+  font-family: "Arial", sans-serif; /* Modern sans-serif font */
+  font-weight: bold; /* Bold text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  letter-spacing: 4px; /* Adjust the letter spacing */
+  text-align: center; /* Center-align the text */
+  line-height: 1.2; /* Space between lines */
+  margin: 50px 0; /* Add margin for spacing */
+ 
+  /* Gemini-Themed Gradient (Purple, Blue, Pink) */
+  background: linear-gradient(45deg, #9b59b6, #2980b9);
+  -webkit-background-clip: text; /* Clip the background gradient to the text */
+  background-clip: text; /* Ensure the gradient is applied to the text itself */
+ 
+  /* Text Shadow for Depth */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow */
+ 
+  /* Transition for Hover Effect */
+  transition: transform 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease;
+}
+ 
+.big-title:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  color: #fff; /* White color on hover */
+}
+ 
+.content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+#chat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 0px 1rem;
+  padding-bottom: 6rem;
+  height: 60vh;
+  overflow-y: auto;
+}
+ 
+.chat-bubble {
+  flex: none;
+  align-self: flex-start;
+  max-width: 80%;
+  min-width: 2em;
+  min-height: 2em;
+  align-self: flex-end;
+  padding: 12px 32px;
+  border-radius: 8px;
+  /* min-height: 200px; */
+  margin: 1rem 0;
+  text-align: right;
+  background-color: #9b59b6;
+}
+ 
+.user-message,
+.response-message {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: left;
+ 
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+ 
+  margin-left: 30px;
+  margin-right: 30px;
+  box-shadow: rgb(93, 93, 93) 1px 1px 1px;
+  background: linear-gradient(135deg,rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+ 
+.user-message {
+  align-self: flex-end;
+  background-color: #1272b6;
+  border-bottom-right-radius: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+ 
+.response-message {
+  /* background-color: #464640; */
+  background-color: #111;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.1),
+  rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+ 
+.response-message p,
+.user-message p {
+  max-width: 100%;
+  text-wrap: wrap;
+  overflow-wrap: anywhere;
+}
+ 
+.fixed {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+ 
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  margin: auto;
+  border-radius: 12px;
+ 
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 996px;
+}
+ 
+.input-footer__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+}
+ 
+.input-footer__submit {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+ 
+.input-footer__submit:hover {
+  background-color: #0056b3;
+}
+ 
+ 
