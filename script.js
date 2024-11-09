@@ -10,7 +10,7 @@ const imageUploader = document.getElementById("imageUploader");
 const streamCheck = document.getElementById("stream");
 
 // const API_KEY = process.env.API_KEY;
-const API_KEY = "AIzaSyCiPBraqnLtvdXzn_qiYjfZauOkmyAkdpo";
+const API_KEY = "API_KEY";
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 const chat = model.startChat({
